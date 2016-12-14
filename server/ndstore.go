@@ -52,16 +52,8 @@ func (c *NDStoreContext) processArgs(argsString string) error {
 		return fmt.Errorf("error: Failed to parse RESTful arguments.\n%s\nReceived: %s", NDStoreArgsErr.VOLUME, argsString)
 	}
 
-	// initialize some default arguments
-	args := NDStoreArgs{
-		X:       [2]int{0, 0},
-		Y:       [2]int{0, 0},
-		Z:       [2]int{0, 0},
-		Res:     0,
-		Token:   "token",
-		Channel: "channel",
-		Server:  "server"}
-	c.args = &args
+	// initialize an empty NDStoreArgs struct
+	c.args = new(NDStoreArgs)
 
 	var err error
 
