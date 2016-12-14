@@ -1,4 +1,4 @@
-package libshape
+package volumes
 
 /* XYZMorton generates a morton order index from integer XYZ coordinates */
 func XYZMorton(xyz []int64) int64 {

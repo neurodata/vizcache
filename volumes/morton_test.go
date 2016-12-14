@@ -1,4 +1,4 @@
-package libshape
+package volumes
 
 import (
   "fmt"
